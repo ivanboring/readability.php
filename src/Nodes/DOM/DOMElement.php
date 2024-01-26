@@ -1,8 +1,8 @@
 <?php
 
-namespace fivefilters\Readability\Nodes\DOM;
+namespace ivan_boring\Readability\Nodes\DOM;
 
-use fivefilters\Readability\Nodes\NodeTrait;
+use ivan_boring\Readability\Nodes\NodeTrait;
 
 class DOMElement extends \DOMElement
 {
@@ -10,7 +10,7 @@ class DOMElement extends \DOMElement
 
     /**
      * Returns the child elements of this element.
-     * 
+     *
      * To get all child nodes, including non-element nodes like text and comment nodes, use childNodes.
      *
      * @return DOMNodeList

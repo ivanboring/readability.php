@@ -1,6 +1,6 @@
 <?php
 
-namespace fivefilters\Readability;
+namespace ivan_boring\Readability;
 
 use Psr\Log\LoggerAwareTrait;
 use Psr\Log\LoggerInterface;

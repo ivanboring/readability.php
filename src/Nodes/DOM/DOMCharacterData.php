@@ -1,8 +1,8 @@
 <?php
 
-namespace fivefilters\Readability\Nodes\DOM;
+namespace ivan_boring\Readability\Nodes\DOM;
 
-use fivefilters\Readability\Nodes\NodeTrait;
+use ivan_boring\Readability\Nodes\NodeTrait;
 
 class DOMCharacterData extends \DOMCharacterData
 {

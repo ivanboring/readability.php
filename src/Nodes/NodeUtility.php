@@ -1,11 +1,11 @@
 <?php
 
-namespace fivefilters\Readability\Nodes;
+namespace ivan_boring\Readability\Nodes;
 
-use fivefilters\Readability\Nodes\DOM\DOMDocument;
-use fivefilters\Readability\Nodes\DOM\DOMElement;
-use fivefilters\Readability\Nodes\DOM\DOMNode;
-use fivefilters\Readability\Nodes\DOM\DOMNodeList;
+use ivan_boring\Readability\Nodes\DOM\DOMDocument;
+use ivan_boring\Readability\Nodes\DOM\DOMElement;
+use ivan_boring\Readability\Nodes\DOM\DOMNode;
+use ivan_boring\Readability\Nodes\DOM\DOMNodeList;
 
 /**
  * Class NodeUtility.
@@ -40,14 +40,14 @@ class NodeUtility
         'b64DataUrl' => '/^data:\s*([^\s;,]+)\s*;\s*base64\s*,/i',
         // See: https://schema.org/Article
         'jsonLdArticleTypes' => '/^Article|AdvertiserContentArticle|NewsArticle|AnalysisNewsArticle|AskPublicNewsArticle|BackgroundNewsArticle|OpinionNewsArticle|ReportageNewsArticle|ReviewNewsArticle|Report|SatiricalArticle|ScholarlyArticle|MedicalScholarlyArticle|SocialMediaPosting|BlogPosting|LiveBlogPosting|DiscussionForumPosting|TechArticle|APIReference$/'
-     
+
     ];
 
     /**
      * Finds the next node, starting from the given node, and ignoring
      * whitespace in between. If the given node is an element, the same node is
      * returned.
-     * 
+     *
      * Imported from the Element class on league\html-to-markdown.
      *
      * @param $node

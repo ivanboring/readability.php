@@ -1,11 +1,11 @@
 <?php
 
-namespace fivefilters\Readability\Nodes;
+namespace ivan_boring\Readability\Nodes;
 
-use fivefilters\Readability\Nodes\DOM\DOMDocument;
-use fivefilters\Readability\Nodes\DOM\DOMElement;
-use fivefilters\Readability\Nodes\DOM\DOMNode;
-use fivefilters\Readability\Nodes\DOM\DOMText;
+use ivan_boring\Readability\Nodes\DOM\DOMDocument;
+use ivan_boring\Readability\Nodes\DOM\DOMElement;
+use ivan_boring\Readability\Nodes\DOM\DOMNode;
+use ivan_boring\Readability\Nodes\DOM\DOMText;
 use DOMNodeList;
 
 /**
@@ -488,7 +488,7 @@ trait NodeTrait
      */
     public function isProbablyVisible()
     {
-        return !preg_match('/display:( )?none/i', $this->getAttribute('style')) && 
+        return !preg_match('/display:( )?none/i', $this->getAttribute('style')) &&
                 !$this->hasAttribute('hidden') &&
                 //check for "fallback-image" so that wikimedia math images are displayed
                 (!$this->hasAttribute('aria-hidden') || $this->getAttribute('aria-hidden') !== 'true' || ($this->hasAttribute('class') && strpos($this->getAttribute('class'), 'fallback-image') !== false));
