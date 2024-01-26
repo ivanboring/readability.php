@@ -1,5 +1,7 @@
 # Readability.php
 
+This is a fork adapted for [Drupal/AI Interpolator](https://www.drupal.org/project/ai_interpolator). Only minimal fixing.
+
 [![Latest Stable Version](https://poser.pugx.org/fivefilters/readability.php/v/stable)](https://packagist.org/packages/fivefilters/readability.php) [![Tests](https://github.com/fivefilters/readability.php/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/fivefilters/readability.php/actions/workflows/main.yml)
 
 PHP port of *Mozilla's* **[Readability.js](https://github.com/mozilla/readability)**. Parses html text (usually news and other articles) and returns **title**, **author**, **main image** and **text content** without nav bars, ads, footers, or anything that isn't the main body of the text. Analyzes each node, gives them a score, and determines what's relevant and what can be discarded.
@@ -98,11 +100,11 @@ Then you pass this Configuration object to Readability. The following options ar
 
 - **MaxTopCandidates**: default value `5`, max amount of top level candidates.
 - **CharThreshold**: default value `500`, minimum amount of characters to consider that the article was parsed successful.
-- **ArticleByLine**: default value `false`, search for the article byline and remove it from the text. It will be moved to the article metadata. 
-- **StripUnlikelyCandidates**: default value `true`, remove nodes that are unlikely to have relevant information. Useful for debugging or parsing complex or non-standard articles. 
-- **CleanConditionally**: default value `true`, remove certain nodes after parsing to return a cleaner result. 
-- **WeightClasses**: default value `true`, weight classes during the rating phase. 
-- **FixRelativeURLs**: default value `false`, convert relative URLs to absolute. Like `/test` to `http://host/test`. 
+- **ArticleByLine**: default value `false`, search for the article byline and remove it from the text. It will be moved to the article metadata.
+- **StripUnlikelyCandidates**: default value `true`, remove nodes that are unlikely to have relevant information. Useful for debugging or parsing complex or non-standard articles.
+- **CleanConditionally**: default value `true`, remove certain nodes after parsing to return a cleaner result.
+- **WeightClasses**: default value `true`, weight classes during the rating phase.
+- **FixRelativeURLs**: default value `false`, convert relative URLs to absolute. Like `/test` to `http://host/test`.
 - **SubstituteEntities**: default value `false`, disables the `substituteEntities` flag of libxml. Will avoid substituting HTML entities. Like `&aacute;` to á.
 - **NormalizeEntities**: default value `false`, converts UTF-8 characters to its HTML Entity equivalent. Useful to parse HTML with mixed encoding.
 - **OriginalURL**: default value `http://fakehost`, original URL from the article used to fix relative URLs.
@@ -127,7 +129,7 @@ In the log you will find information about the parsed nodes, why they were remov
 
 ## Limitations
 
-Of course the main limitation is PHP. Websites that load the content through lazy loading, AJAX, or any type of javascript fueled call will be ignored (actually, *not ran*) and the resulting text will be incorrect, compared to the readability.js results. All the articles you want to parse with readability.php need to be complete and all the content should be in the HTML already.  
+Of course the main limitation is PHP. Websites that load the content through lazy loading, AJAX, or any type of javascript fueled call will be ignored (actually, *not ran*) and the resulting text will be incorrect, compared to the readability.js results. All the articles you want to parse with readability.php need to be complete and all the content should be in the HTML already.
 
 ## Known libxml parsing issues
 
@@ -171,7 +173,7 @@ Self closing tags like `<br />` get automatically expanded to `<br></br`. No way
 Readability.php uses
 
  * [HTML5-PHP](https://github.com/Masterminds/html5-php) to parse and serialise HTML.
- * [PSR Log](https://github.com/php-fig/log) interface to define the allowed type of loggers. 
+ * [PSR Log](https://github.com/php-fig/log) interface to define the allowed type of loggers.
  * [Monolog](https://github.com/Seldaek/monolog) is only required on development installations. (`--dev` option during `composer install`).
 
 ## To-do
